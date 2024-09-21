@@ -1,8 +1,16 @@
-# React + Vite
+# TomaTrends - Client Side
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TomaTrends is an e-commerce platform focused on women's fashion and baby clothing. This repository contains the frontend code, built using **React.js** and styled with **Tailwind CSS** for a modern and responsive user experience.  
+This Project Is Under Development
 
-Currently, two official plugins are available:
+![Alt text](https://i.pinimg.com/originals/2a/53/65/2a53651a35816f499270d8275fd5318f.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Women's Fashion and Baby Clothing
+- Responsive Design
+- User-friendly Interface
+
+## Tech Stack
+- React.js
+- Tailwind CSS
+- Vite
