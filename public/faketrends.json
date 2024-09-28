@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Three-Piece",
+      "description": "Discover the beauty and elegance of our Three-Piece collection, perfect for modern and traditional styles.",
+      "bgColor": "bg-[#EFEFEF]",
+      "image": "https://i.ibb.co.com/dktFjHm/pmawo-512-removebg-preview.png"
+    },
+    {
+      "id": 2,
+      "title": "Lehenga",
+      "description": "Explore our exquisite collection of Lehengas, crafted with intricate designs for your special occasions.",
+      "bgColor": "bg-[#EAD9E3]",
+      "image": "https://i.ibb.co.com/2090mty/ZIR14991-15-removebg-preview.png"
+    },
+    {
+      "id": 3,
+      "title": "Sari",
+      "description": "Find timeless beauty with our range of Sari, offering a blend of traditional charm and contemporary appeal.",
+      "bgColor": "bg-[#EFEFEF]",
+      "image": "https://i.ibb.co.com/JBHmfTR/c47c6186379a14e04bc4008ffac76151-removebg-preview.png"
+    }
+  ]
+  

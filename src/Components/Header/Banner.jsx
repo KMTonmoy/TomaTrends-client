@@ -23,7 +23,7 @@ const Banner = () => {
     }
 
     return (
-        <div className='relative w-full rounded-2xl  h-[600px] overflow-hidden'>
+        <div className='relative w-full rounded-2xl  h-[500px] md:h-[600px] overflow-hidden'>
             {banners.map((banner, index) => (
                 <div
                     key={banner.id}
@@ -37,27 +37,29 @@ const Banner = () => {
                 >
                     <div className="h-full px-2 w-full flex items-center justify-start bg-black bg-opacity-50">
                         <div className="text-left pl-10 max-w-[700px] text-white">
-                            <h2 className="text-4xl font-bold mb-4">{banner.title}</h2>
-                            <p className="text-xl">{banner.description}</p>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-4">{banner.title}</h2>
+                            <p className=" md:text-xl">{banner.description}</p>
                         </div>
                     </div>
                 </div>
             ))}
 
-            <div className='absolute top-1/2 left-4 transform -translate-y-1/2'>
+            <div className='absolute bottom-0 right-4 transform -translate-y-1/2'>
                 <button
                     onClick={() => setCurrentIndex((currentIndex - 1 + banners.length) % banners.length)}
-                    className='text-white bg-black bg-opacity-50 p-2 rounded-full'
-                >
-                    &#8249;
-                </button>
-            </div>
-            <div className='absolute top-1/2 right-4 transform -translate-y-1/2'>
-                <button
-                    onClick={() => setCurrentIndex((currentIndex + 1) % banners.length)}
-                    className='text-white bg-black bg-opacity-50 p-2 rounded-full'
+                    className='text-white bg-black bg-opacity-50 p-3 text-2xl rounded-full'
                 >
                     &#8250;
+
+                </button>
+            </div>
+            <div className='absolute bottom-0  right-14 transform -translate-y-1/2'>
+                <button
+                    onClick={() => setCurrentIndex((currentIndex + 1) % banners.length)}
+                    className='text-white bg-black bg-opacity-50 p-3 text-2xl rounded-full'
+                >
+                    &#8249;
+
                 </button>
             </div>
         </div>
