@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is your return policy?",
+        "answer": "You can return any item within 30 days of purchase for a full refund."
+    },
+    {
+        "question": "How long does shipping take?",
+        "answer": "Shipping typically takes 5-7 business days."
+    },
+    {
+        "question": "Do you offer customer support?",
+        "answer": "Yes, our customer support is available 24/7 via email and live chat."
+    },
+    {
+        "question": "Where can I find my order history?",
+        "answer": "You can find your order history in your account settings under 'Order History'."
+    },
+    {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept credit cards, PayPal, and bank transfers."
+    }
+]

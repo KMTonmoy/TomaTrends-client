@@ -5,50 +5,52 @@ const TrendCard = ({ bgColor, title, description, image }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <motion.div
-            className={`h-auto p-8 rounded-2xl md:w-[400px] w-full overflow-hidden relative shadow-lg transition-transform duration-300 ${bgColor}`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <div className="text-center">
-                <h1 className="text-[#303030] text-[30px] md:text-[40px] font-semibold mb-3">
-                    {title}
-                </h1>
+        <div>
+            <motion.div
+                className="h-auto p-8 rounded-2xl md:w-[400px] w-full overflow-hidden relative shadow-lg transition-transform duration-300"
+                style={{ backgroundColor: bgColor }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                <div className="text-center">
+                    <h1 className="text-[#303030] text-[30px] md:text-[40px] font-semibold mb-3">
+                        {title}
+                    </h1>
 
-                {isHovered ? (
-                    <motion.button
-                        className="bg-[#D63384] text-white px-6 py-2 mt-5 rounded-lg"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        Shop Now
-                    </motion.button>
-                ) : (
-                    <motion.p
-                        className="text-[#636363]"
-                        initial={{ opacity: 1 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        {description}
-                    </motion.p>
-                )}
+                    {isHovered ? (
+                        <motion.button
+                            className="bg-[#D63384] w-[400px] md:w-full text-white px-6 py-2 mt-5 rounded-lg"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 20 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                            Shop Now
+                        </motion.button>
+                    ) : (
+                        <motion.p
+                            className="text-[#636363]"
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            {description}
+                        </motion.p>
+                    )}
 
-                <div className="mt-5 flex justify-center">
-                    <img className="h-[400px] rounded-xl" src={image} alt={title} />
+                    <div className="mt-5 flex justify-center">
+                        <img className="h-[400px] rounded-xl" src={image} alt={title} />
+                    </div>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 };
 
 const LatestTrend = () => {
     const [trends, setTrends] = useState([]);
 
-    // Fetch data from faketrends.json
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -64,17 +66,26 @@ const LatestTrend = () => {
     }, []);
 
     return (
-        <div className="flex flex-wrap justify-center gap-5 p-5">
-            {trends.map((trend) => (
-                <TrendCard
-                    key={trend.id}
-                    bgColor={trend.bgColor}
-                    title={trend.title}
-                    description={trend.description}
-                    image={trend.image}
-                />
-            ))}
-        </div>
+        <>
+            <div className="px-5 -mb-10 mt-10 ">
+                <h1 className="text-center text-4xl font-bold text-gray-800 relative mb-10">
+                    Our Latest Trends
+                    <span className="block w-24 h-1 bg-pink-500 mx-auto mt-2"></span>
+                </h1>
+            </div>
+            <div className="flex flex-wrap justify-center gap-5 p-5">
+                {trends.map((trend) => (
+                    <TrendCard
+                        key={trend.id}
+                        bgColor={trend.bgColor}
+                        title={trend.title}
+                        description={trend.description}
+                        image={trend.image}
+                    />
+                ))}
+            </div>
+        </>
+
     );
 };
 
